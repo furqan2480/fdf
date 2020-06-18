@@ -2,15 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>CommerceHQ</title>
+    <title>Fresh Deal Finder</title>
     <base href="/"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link id="b-favicon" rel="icon" type="image/x-icon" href="data:;base64,="/>
-<link rel="stylesheet" href="styles.a56ad0dc892657a16e06.css"></head>
-<body>
+<link rel="stylesheet" href="styles.a56ad0dc892657a16e06.css">
+<script>
+var url=getParams(window.location.href);
+document.getElementById("demo").innerHTML = 5 + 6;
 
-Hello World!
+</script>
+
+</head>
+<body>
+<p id="demo"></p>
+<script>
+var getQueryString = function ( field, href ) {
+	var href = url ? url : window.location.href;
+	var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
+	var string = reg.exec(href);
+	return string ? string[1] : null;
+};
+
+var href = url ? url : window.location.href;
+document.getElementById("demo").innerHTML = href;
+document.getElementById("demo").innerHTML = getQueryString('search',href);
+document.getElementById("demo").innerHTML = getQueryString('search2',href);
+
+
+
+
+</script>
+
 
 </body>
 </html>
