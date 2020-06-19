@@ -25,16 +25,27 @@ var getQueryString = function ( field, href ) {
 	return string ? string[1] : null;
 };
 
+
 var href = url ? url : window.location.href;
 document.getElementById("demo").innerHTML = href;
 document.getElementById("demo").innerHTML = getQueryString(search,href);
 document.getElementById("demo").innerHTML = getQueryString(search2,href);
 
+function WriteFile()
+{
+var fso = new ActiveXObject("Scripting.FileSystemObject");
+var fh = fso.CreateTextFile("c:\\fdf\\fdf\\Test.txt", true);
+fh.WriteLine("Some text goes here...");
+fh.Close();
+}
 
-
+WriteFile();
 
 </script>
-
+<%
+    String name = request.getParameter("name");
+	document.getElementById("demo").innerHTML = name;
+%>
 
 </body>
 </html>
