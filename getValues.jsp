@@ -1,10 +1,9 @@
 <html>
 <head><title>First JSP</title></head>
 <body>
-<p id="demo"></p>
-<%
+  <%
     String name = request.getParameter("name");
-	document.getElementById("demo").innerHTML = name;
 %>
+<h2>Well, life goes on ... </h2><p>(<%= name %>)</p>
 </body>
 </html>
