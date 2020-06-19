@@ -3,7 +3,7 @@
 <body>
   <%
     String name = request.getParameter("name");
-	String name = request.getParameter("email");
+	String email = request.getParameter("email");
 %>
 <p>(<%= name %>)</p>
 <p>(<%= email %>)</p>
