@@ -3,7 +3,9 @@
 <body>
   <%
     String name = request.getParameter("name");
+	String name = request.getParameter("email");
 %>
-<h2>Well, life goes on ... </h2><p>(<%= name %>)</p>
+<p>(<%= name %>)</p>
+<p>(<%= email %>)</p>
 </body>
 </html>
